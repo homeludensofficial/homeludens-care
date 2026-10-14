@@ -187,7 +187,7 @@ textarea{min-height:120px;resize:vertical}
     if(!form.address) miss.push('주소');
     if(!form.content) miss.push('자세한 내용');
     if(!$('agree').checked) miss.push('개인정보 동의');
-    if(miss.length){ msg.textContent = `${miss.join(', ')}을(를) 확인해 주세요.`; return; }
+    if(miss.length){ msg.textContent = `아직 채우지 않은 항목이 있어요: ${miss.join(', ')}`; return; }
 
     const btn = $('send'); btn.disabled = true;
     const bucket = kind==='as' ? 'as-files' : 'claim-photos';
